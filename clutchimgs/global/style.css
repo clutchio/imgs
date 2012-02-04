@@ -1,0 +1,93 @@
+/* Your project's global style overrides go here */
+
+body {background: transparent;}
+
+a {color:#0099ff;text-decoration:none;}
+div#photos {width:640px;overflow-x:hidden;margin-top: 88px;}
+
+.display-thumb li{float:left;width:150px;margin:8px 0 0 8px;background:#dfdfd7;}
+.display-thumb li img {width:150px;height:150px;float:left;}
+
+.display-detail {padding:0px;}
+.display-detail li:first-child {margin:0;padding:15px 15px 30px 15px;border-bottom:2px solid #ccc;border-top:none;}
+.display-detail li {border-top:2px solid #fff;border-bottom:2px solid #ccc;padding:30px 15px;}
+.display-detail li h2 {
+        background-color: #333333;
+        background-repeat: repeat-x;
+        border-color: #000000;
+        border-style: solid;
+        border-width: 1px;
+        color:#66ccff;padding:10px;font-size:31px;line-height:31px;
+    }
+
+.display-detail ul.comments {margin:0 0 5px 10px;}
+.display-detail ul.comments li {border:none;margin:3px 0 8px;padding:0;color:#666;background:none;font-size:21px;}
+.display-detail ul.comments li span.username {font-weight:bold;font-style:bold;}
+.display-detail ul.comments li a.comment-detail {color:#999;font-weight:bold;text-decoration:none;}
+.display-detail li .img-wrap {position:relative;padding:12px;width:584px;background:url(images/loading.png) no-repeat 48% 35% #fff;border-top:none;border-right:1px solid #ccc;border-bottom:1px solid #d2d0d0;border-left:1px solid #ddd;}
+.display-detail li img.main {}
+.display-detail li .actions {margin:15px 0 0 0;position:relative;height:45px;}
+
+.actions .like,.actions .more,.actions .comment {margin:0 17px 0 0;float:left;display:inline-block;text-indent:-5000px;}
+.actions .like {
+    width:164px;
+    height:54px;
+    padding:0;
+    background:url(images/like-btn.png) bottom left no-repeat;
+    }
+.actions .like.liked {
+    width:164px;
+    height:54px;
+    padding:0;
+    background:url(images/like-btn.png) top left no-repeat;
+    }    
+.actions .comment {
+    width:228px;
+    height:54px;
+    padding:0;
+    background:url(images/comment-btn.png) bottom left no-repeat;
+    }
+.actions .more {
+    margin:0;
+    width:183px;
+    height:54px;
+    padding:0;
+    margin:0;
+    background:url(images/share-btn.png) bottom left no-repeat;
+    }
+
+a.show-more {
+    margin:45px 0 60px 198px;
+    width:228px;
+    height:54px;
+    padding:0;
+    text-indent:-5000px;
+    display:block;
+    background:url(images/show-more-btn.png) bottom left no-repeat;
+}
+
+a.like-summary {text-decoration:none;font-weight:bold;margin:15px 0 0 0;display:inline-block;background:url(images/star.png) 1px 8px no-repeat;padding:8px 15px 6px 30px;}
+#top-bar {width:640px;height:88px;background:url(images/top-bar2.png) top left no-repeat;position:fixed;top:0;left:0;z-index:1;}
+
+.btn.grey {
+    color: #000;
+    background-image: -webkit-gradient(linear, left top, left bottom,
+    from(#f7f8f8),
+    color-stop(.49,#d2d3d5),
+    color-stop(.49,#c0c1c4),
+    to(#c0c1c4));
+    background-image: -moz-gradient(linear, left top, left bottom,
+    from(#f7f8f8),
+    color-stop(.49,#d2d3d5),
+    color-stop(.49,#c0c1c4),
+    to(#c0c1c4));
+    border: solid 1px rgba(79, 79, 79, 0.5);
+    text-shadow:0 1px 0 #eee;
+    }
+    
+    
+.hide {display:none !important;}
+    
+    
+    
+

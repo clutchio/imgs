@@ -1,0 +1,227 @@
+/*****************************************************************************
+Some clutch.io core styles, used as a nice starting point for app development
+we tried to mimic iOS stock stuff as best as we could. These styles can be used
+however you like. More complicated and custom apps will probably just not include 
+these styles.
+*****************************************************************************/
+
+
+/*****************************************************************************
+Pretty standard reset 
+*****************************************************************************/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {margin: 0;padding: 0;font-size: 110%;vertical-align: baseline;border: 0;outline: 0;background: transparent;}
+ol, ul {list-style: none;}
+blockquote, q {quotes: none;}
+table {border-collapse: collapse;border-spacing: 0;}
+body {font-family:Helvetica,Arial,sans-serif;-webkit-user-select: none;}
+
+
+/*****************************************************************************
+styles for iOS standard table views 
+*****************************************************************************/
+.table .section-header,.table .section-footer {
+    padding: 5px 20px;
+    vertical-align: middle;
+    font-weight: bold;
+    font-size: 32px;
+    color: #FFF;
+    border-bottom: 2px solid #949EA6;
+    border-top: 2px solid #B0BAC2;
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#94A2AD), to(#B7C0C7));
+    text-shadow: #696969 0 2px;
+    }
+.table .section ul.cells li.cell {
+    padding: 0 20px;
+    height: 85px;
+    border-top: 2px solid #E0E0E0;
+    font-size: 38px; 
+    font-weight: bold;
+    line-height: 85px;
+    vertical-align: middle;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    }
+/* cell overwrite for multiline content */
+.table .section ul.cells li.cell.multi {
+    padding: 20px;
+    height: auto;
+    border-top: 2px solid #E0E0E0;
+    font-size: 38px; 
+    font-weight: bold;
+    line-height: 1.2;
+    vertical-align: middle;
+    text-overflow: ellipsis;
+    white-space: normal;
+    }
+.table .section ul.cells li.cell.selected {
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#009DFD), to(#0067F0));
+    color: #FFF;
+    }
+.table .section ul.cells li.cell:first-child {
+    border-top: none;
+    }
+.table .section ul.cells li.cell:last-child {
+    border-bottom: 2px solid #E0E0E0;
+    }
+/* shared table cell accessory images */
+.section ul.cells li.cell.accessory-checkmark {
+    background: url(../images/table-accessory-checkmark.png) no-repeat 98% 52%;
+    padding-right: 30px;
+    }
+.section ul.cells li.cell.accessory-disclosure-button {
+    background: url(../images/table-accessory-disclosure-button.png) no-repeat 99% 52%;
+    padding-right: 30px;
+    }
+.section ul.cells li.cell.accessory-disclosure-indicator {
+    background: url(../images/table-accessory-disclosure-indicator.png) no-repeat 98% 52%;
+    padding-right: 30px;
+    }
+    
+.section ul.cells li.cell img.cell-icon {
+    float:left;
+    display:block;
+    margin:14px 15px 0 0;
+    }
+
+
+/*****************************************************************************
+styles for iOS grouped table views 
+*****************************************************************************/
+.table.grouped {
+    padding: 14px;
+    background: url(../images/grouped-table-bkg.png);
+    }
+.table.grouped .section-header{
+    background:none;
+    border:none;
+    color: #4C566C;
+    font-weight:bold;
+    font-size:32px;
+    margin: 0;
+    padding:25px 0 12px 21px;
+    text-shadow: 0 1px 0 #FFFFFF;
+    }
+.table.grouped .section-footer{
+    font-size:32px;
+    color: #4C566C;
+    font-weight:normal;
+    text-align:center;
+    margin: 25px 0 35px;
+    text-shadow: 0 1px 0 #FFFFFF;
+    border:none;
+    background:none;
+    }
+.table.grouped .section {
+    margin:0 0 10px 0;
+    }
+.table.grouped .section ul.cells li.cell {
+    padding:0 0 0 20px;
+    height: 86px;
+    line-height: 86px;
+    font-size: 34px;
+    font-weight: bold;
+    background-color: #FFF;
+    border-top: 1px solid #CACACA;
+    border-right: 2px solid #A1A7AD;
+    border-bottom: 1px solid #D1D1D1;
+    border-left: 2px solid #A1A7AD;
+    }
+.table.grouped .section ul.cells li.cell:first-child {
+    border-top-right-radius: 20px 20px;
+    border-top-left-radius: 20px 20px;
+    border-top: 2px solid #A1A7AD;
+    }
+.table.grouped .section ul.cells li.cell:last-child {
+    border-bottom-right-radius: 20px 20px;
+    border-bottom-left-radius: 20px 20px;
+    border-bottom: 2px solid #A1A7AD;
+    box-shadow: 0 2px rgba(255, 255, 255, 0.5);
+    }
+    
+    
+/*****************************************************************************
+styles for iOS-like buttons
+*****************************************************************************/
+input.btn {display:block;width:100%;} 
+
+.btn {
+    color: #324F85;
+    padding: 20px;
+    font-family: 'Helvetica Neue', Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 32px;
+    border-radius: 20px;
+    background: #fff;
+    border: solid 2px #A1A7AD;
+    text-decoration:none;
+    display:block;
+    margin:0 0 15px 0;
+    text-align:center;
+    }   
+.btn.grey {
+    color: #000;
+    background: -webkit-gradient(linear, left top, left bottom,
+    from(#f7f8f8),
+    color-stop(.49,#d2d3d5),
+    color-stop(.49,#c0c1c4),
+    to(#c0c1c4));
+    border: solid 1px rgba(79, 79, 79, 0.5);
+    text-shadow:0 1px 0 #eee;
+    }
+.btn.blk {
+    color: white;
+    background: -webkit-gradient(linear, left top, left bottom,
+    from(#838383),
+    color-stop(.49,#444444),
+    color-stop(.49,#303030),
+    to(#333333));
+    border: solid 1px rgba(79, 79, 79, 0.75);
+    text-shadow:0 -1px 0 #000;
+    }    
+.btn.blue {
+    color: white;
+    background: -webkit-gradient(linear, left top, left bottom,
+    from(#6f95e8),
+    color-stop(.49,#3970e0),
+    color-stop(.49,#2260dd),
+    to(#2463de));
+    border: solid 1px rgba(79, 79, 79, 0.5);
+    text-shadow:0 -1px 0 #2d5099;
+    }
+.btn.green {
+    color: white;
+    background: -webkit-gradient(linear, left top, left bottom,
+    from(#9ec699),
+    color-stop(.49,#41bf4a),
+    color-stop(.49,#0eb81d),
+    to(#0d9d23));
+    border: solid 1px rgba(79, 79, 79, 0.5);
+    text-shadow:0 -1px 0 #3e7440;
+    }
+.btn.red {
+    color: white;
+    background: -webkit-gradient(linear, left top, left bottom,
+    from(#f08189),
+    color-stop(.49,#e73340),
+    color-stop(.49,#e10111),
+    to(#ed1414));
+    border: solid 1px rgba(79, 79, 79, 0.5);
+    text-shadow:0 -1px 0 #8d343b;
+    }
+.btn.yellow {
+    color: #000;
+    background: -webkit-gradient(linear, left top, left bottom,
+    from(#ead9ad),
+    color-stop(.49,#eece6a),
+    color-stop(.49,#f0be27),
+    to(#f8d924));
+    border: solid 1px rgba(79, 79, 79, 0.5);
+    text-shadow:0 1px 0 #fff;
+    }   
+    
+    
+    
+    
+
+
+.hide {display: none;}

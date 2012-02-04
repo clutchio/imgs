@@ -1,0 +1,16 @@
+# Xcode
+Imgs/build/*
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!Imgs/default.mode1v3
+*.mode2v3
+!Imgs/default.mode2v3
+*.perspectivev3
+!Imgs/default.perspectivev3
+*.xcworkspace
+!Imgs/default.xcworkspace
+Imgs/xcuserdata
+Imgs/profile
+*.moved-aside
+*.DS_Store

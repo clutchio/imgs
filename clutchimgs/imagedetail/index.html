@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <title>Base Page</title>
+
+        <meta charset="utf-8">
+        <meta content="width=device-width, user-scalable=no, initial-scale=.5" name="viewport">
+        <meta content="black" name="apple-mobile-web-app-status-bar-style">
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+
+        <script src="http://127.0.0.1:41676/target/target-script-min.js#anonymous"></script>
+
+        <script type="text/javascript" src="../clutch-core/js/zepto.js"></script>
+        <script type="text/javascript" src="../clutch-core/js/underscore.js"></script>
+        <script type="text/javascript" src="../clutch-core/js/backbone.js"></script>
+        <script type="text/javascript" src="../clutch-core/js/clutch.js"></script>
+        <script type="text/javascript" src="screen.js"></script>
+
+        <!-- <script src="http://127.0.0.1:41676/target/target-script-min.js#anonymous"></script> -->
+
+        <link rel="stylesheet" href="../clutch-core/css/clutch-base.css" />
+        <link rel="stylesheet" href="../global/style.css" />
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <script type="text/html" id="template-image-detail">
+            <h2><%= c.image.title %></h2>
+            <div class="img-wrap">
+            <img
+                class="main"
+                width="590"
+                height="<%= parseInt((590 * c.image.height) / c.image.width, 10) %>"
+                src="http://i.imgur.com/<%= c.image.hash %>l<%= c.image.ext %>" />
+            </div>
+            <a class="like-summary" href="#"><%= c.image.likes.length %> Like<%= c.image.likes.length === 1 ? '' : 's' %></a>
+            <ul class="comments">
+                <% for(var i = 0; i < c.image.comments.length; ++i) { var comment = c.image.comments[i]; %>
+                <li>
+                    <span class="username"><%= comment.user.username %></span>:
+                    <%= comment.text %>
+                </li>
+                <% } %>
+            </ul>
+            <div class="actions">
+                <a class="like <%= liked ? 'liked' : '' %>" href="#">like<%= liked ? 'd' : '' %></a>
+                <a class="comment" href="#">comment</a>
+                <a class="more" href="#">share</a>
+            </div>
+        </script>
+        <div id="photos"><ul id="photo-detail" class="display-detail"></ul></div>
+    </body>
+</html>

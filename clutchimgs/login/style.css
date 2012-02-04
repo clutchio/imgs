@@ -1,0 +1,58 @@
+/* Your screen-specific style overrides go here. */
+
+body {width:640px;overflow-x:hidden;}
+form#login-form {width:600px;margin:20px auto 0;}
+form#login-form .wrap {border:5px solid #E3E3D7;border-radius:20px;background:#fff;}
+form#login-form div.password {margin:0;padding:15px 0 15px 15px;}
+form#login-form div.username {margin:0;padding:15px 0 15px 15px;border-bottom:2px solid #E3E3D7;}
+form#login-form div.password label,form#login-form div.username label {font-weight:bold;font-size:32px;}
+form#login-form div.username input,form#login-form div.password input {font-size:34px;width:310px;border:none;margin:0 0 0 5px;}
+
+form#login-form input#login-btn {
+    padding:20px;
+    font-size: 32px;
+    border-radius: 20px;
+    background-image:url(images/star.png),-webkit-gradient(linear, left top, left bottom,
+    from(#f7f8f8),
+    color-stop(.49,#d2d3d5),
+    color-stop(.49,#c0c1c4),
+    to(#c0c1c4));
+    background-position:15% 50%;
+    background-repeat:no-repeat;
+    border:5px solid #e3e3d7;
+    display:block;
+    text-align:center;
+    text-decoration:none;
+    font-weight:bold;
+    text-shadow:0 1px 0 #fff;
+    width:100%;
+    margin:20px 0 0 0;
+    color:#0382e4;
+}
+
+a#facebook-btn {
+    padding:20px 0 20px 60px;
+    font-size: 32px;
+    border-radius: 20px;
+    background-image:url(../global/images/fb-icon.png),-webkit-gradient(linear, left top, left bottom,
+    from(#859dcf),
+    color-stop(.49,#607cb7),
+    color-stop(.49,#3a5796),
+    to(#3b5998));
+    background-position:5.5% 50%;
+    background-repeat:no-repeat;
+    border:5px solid #e3e3d7;
+    display:block;
+    text-align:center;
+    text-decoration:none;
+    font-weight:bold;
+    color:#fff;
+    text-shadow:0 -1px 0 #000;
+    margin:10px 0 0 20px;
+    width:382px;
+    float:left;
+}
+
+.or {float:right;margin:32px 79px 0 0;font-size:42px;}
+
+.clear {clear:both;}

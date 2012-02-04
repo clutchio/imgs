@@ -1,0 +1,31 @@
+/* Your screen-specific style overrides go here. */
+
+body {width:640px;overflow-x:hidden;}
+form#register-form {width:600px;margin:20px auto 0;}
+form#register-form .wrap {border:5px solid #E3E3D7;border-radius:20px;background:#fff;}
+form#register-form div.email {margin:0;padding:15px 0 15px 15px;}
+form#register-form div.username,form#register-form div.password {margin:0;padding:15px 0 15px 15px;border-bottom:2px solid #E3E3D7;}
+form#register-form div.password label,form#register-form div.username label,form#register-form div.email label {font-weight:bold;font-size:32px;}
+form#register-form div.username input,form#register-form div.password input,form#register-form div.email input {font-size:34px;width:380px;border:none;margin:0 0 0 5px;}
+
+form#register-form input#register-btn {
+    padding:20px;
+    font-size: 32px;
+    border-radius: 20px;
+    background-image:url(images/star.png),-webkit-gradient(linear, left top, left bottom,
+    from(#f7f8f8),
+    color-stop(.49,#d2d3d5),
+    color-stop(.49,#c0c1c4),
+    to(#c0c1c4));
+    background-position:15% 50%;
+    background-repeat:no-repeat;
+    border:5px solid #e3e3d7;
+    display:block;
+    text-align:center;
+    text-decoration:none;
+    font-weight:bold;
+    text-shadow:0 1px 0 #fff;
+    width:100%;
+    margin:20px 0 0 0;
+    color:#0382e4;
+}
