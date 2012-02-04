@@ -244,7 +244,8 @@
         success:(void(^)(id))successBlock_ 
         failure:(void(^)(AFHTTPRequestOperation *))failureBlock_
 {
-    // Build a request to imgur's API
+    // Fetches a list of images from Imgur's API, then annotates it with like and comment data from Parse.
+    
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:url]];
     NSString *charset = (NSString *)CFStringConvertEncodingToIANACharSetName(CFStringConvertNSStringEncodingToEncoding(NSUTF8StringEncoding));
     [request setValue:[NSString stringWithFormat:@"application/json; charset=%@", charset] forHTTPHeaderField:@"Content-Type"];
