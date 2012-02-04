@@ -9,5 +9,7 @@ comment on them and like them.  Imgs also uses [Parse](https://parse.com/) as
 its storage layer to show how easy integration with modern platforms can be
 when using Clutch.
 
+We designed, coded, and shipped this app in a week.
+
 [![Screenshot 1](https://github.com/boilerplate/Imgs/raw/master/screen1.png)](http://itunes.apple.com/us/app/imgs/id498626072?ls=1&mt=8)
 [![Screenshot 2](https://github.com/boilerplate/Imgs/raw/master/screen2.png)](http://itunes.apple.com/us/app/imgs/id498626072?ls=1&mt=8)
