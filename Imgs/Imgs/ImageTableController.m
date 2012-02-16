@@ -387,7 +387,10 @@
 
 #pragma mark - ClutchViewDelegate
 
-- (void)clutchView:(ClutchView *)clutchView methodCalled:(NSString *)method withParams:(NSDictionary *)params callback:(void(^)(id))callback
+- (void)clutchView:(ClutchView *)clutchView
+      methodCalled:(NSString *)method
+        withParams:(NSDictionary *)params
+          callback:(void(^)(id))callback
 {
     // This is where we inspect the method called and handle callbacks
     if([method isEqualToString:@"imgurRequest"]) {
