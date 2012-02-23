@@ -28,24 +28,32 @@ div#photos {width:640px;overflow-x:hidden;margin-top: 88px;}
 .display-detail li img.main {}
 .display-detail li .actions {margin:15px 0 0 0;position:relative;height:45px;}
 
-.actions .like,.actions .more,.actions .comment {margin:0 17px 0 0;float:left;display:inline-block;text-indent:-5000px;}
+.actions .like,.actions .more,.actions .comment {margin:0 17px 0 0;float:left;display:inline-block;text-indent:-5000px;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-touch-callout:none;
+    }
+
+.actions a.like:focus,.actions a.more:focus,.actions a.comment:focus {background-position:0 0;}
+.actions a.like:active,.actions a.more:active,.actions a.comment:active {background-position:0 0;}
+
+
 .actions .like {
     width:164px;
     height:54px;
     padding:0;
-    background:url(images/like-btn.png) bottom left no-repeat;
+    background:url(images/like-btn.png) 0 -108px no-repeat;
     }
 .actions .like.liked {
     width:164px;
     height:54px;
     padding:0;
-    background:url(images/like-btn.png) top left no-repeat;
+    background:url(images/like-btn.png) 0 -54px no-repeat;
     }    
 .actions .comment {
     width:228px;
     height:54px;
     padding:0;
-    background:url(images/comment-btn.png) bottom left no-repeat;
+    background:url(images/comment-btn.png) 0 -54px no-repeat;
     }
 .actions .more {
     margin:0;
@@ -53,18 +61,22 @@ div#photos {width:640px;overflow-x:hidden;margin-top: 88px;}
     height:54px;
     padding:0;
     margin:0;
-    background:url(images/share-btn.png) bottom left no-repeat;
+    background:url(images/share-btn.png) 0 -54px no-repeat;
     }
 
 a.show-more {
     margin:45px 0 60px 198px;
     width:228px;
-    height:54px;
+    height:50px;
     padding:0;
     text-indent:-5000px;
     display:block;
-    background:url(images/show-more-btn.png) bottom left no-repeat;
+    background:url(images/show-more-btn.png) 0 -50px no-repeat;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-touch-callout:none;
 }
+a.show-more:active {background-position:0 0;}
+a.show-more.loading {background-position:0 -100px;}
 
 a.like-summary {text-decoration:none;font-weight:bold;margin:15px 0 0 0;display:inline-block;background:url(images/star.png) 1px 8px no-repeat;padding:8px 15px 6px 30px;}
 #top-bar {width:640px;height:88px;background:url(images/top-bar2.png) top left no-repeat;position:fixed;top:0;left:0;z-index:1;}
