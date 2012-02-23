@@ -158,7 +158,7 @@ var ShowMoreButton = Clutch.UI.View.extend({
         'click': 'handleTap'
     },
     handleTap: function(e) {
-        $(this.el).text('Loading...');
+        $(this.el).text('Loading...').addClass('loading');
 
         // Prevent double-clicks
         if(this.timeout) {
@@ -169,7 +169,7 @@ var ShowMoreButton = Clutch.UI.View.extend({
             delete this.timeout;
             IMAGES.page();
             IMAGES.addImages();
-            $(this.el).text('Show More');
+            $(this.el).text('Show More').removeClass('loading');
             if(!IMAGES.options.data.gallery[IMAGES.options.end + 1]) {
                 $(this.el).addClass('hide');
             }
