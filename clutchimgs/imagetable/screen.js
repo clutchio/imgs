@@ -144,8 +144,8 @@ var ImageList = Clutch.UI.View.extend({
         this.options.end += delta;
     },
     getUrl: function() {
-        return 'http://imgsweb.herokuapp.com/' + this.options.kind;
-        //return 'http://imgur.com/gallery/' + this.options.kind + '/all/page/0.json';
+        //return 'http://imgsweb.herokuapp.com/' + this.options.kind;
+        return 'http://imgur.com/gallery/' + this.options.kind + '/all/page/0.json';
     }
 });
 
