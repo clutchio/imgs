@@ -9,7 +9,8 @@
 #import <UIKit/UIKit.h>
 #import <Clutch/Clutch.h>
 #import "EGORefreshTableHeaderView.h"
-#import <Clutch/JSONKit.h>
+#import "JSONKit.h"
+#import "AFNetworking.h"
 #import <Parse/Parse.h>
 
 @interface ImageTableController : UIViewController <ClutchViewDelegate, UIScrollViewDelegate, EGORefreshTableHeaderDelegate>

@@ -23,16 +23,16 @@
 #import <Foundation/Foundation.h>
 #import <Availability.h>
 
-#ifndef _AFNETWORKING_
-#define _AFNETWORKING_
+#ifndef _CLUTCHAFNETWORKING_
+#define _CLUTCHAFNETWORKING_
 
-#import "AFURLConnectionOperation.h"
+#import "ClutchAFURLConnectionOperation.h"
 
-#import "AFHTTPRequestOperation.h"
-#import "AFHTTPClient.h"
+#import "ClutchAFHTTPRequestOperation.h"
+#import "ClutchAFHTTPClient.h"
 
 #if __IPHONE_OS_VERSION_MIN_REQUIRED
-#import "AFNetworkActivityIndicatorManager.h"
+#import "ClutchAFNetworkActivityIndicatorManager.h"
 #endif
 
-#endif /* _AFNETWORKING_ */
+#endif /* _CLUTCHAFNETWORKING_ */

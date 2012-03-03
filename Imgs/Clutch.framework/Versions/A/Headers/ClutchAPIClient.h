@@ -8,12 +8,12 @@
 
 #import <Foundation/Foundation.h>
 #import <Clutch/ClutchConf.h>
-#import <Clutch/AFNetworking.h>
+#import <Clutch/ClutchAFNetworking.h>
 
 extern NSString * const kClutchBaseURLString;
 extern NSString * const kClutchAPIVersion;
 
-@interface ClutchAPIClient : AFHTTPClient {
+@interface ClutchAPIClient : ClutchAFHTTPClient {
     NSString *_appKey;
 }
 

@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <Clutch/Clutch.h>
 #import <Parse/Parse.h>
+#import "AFNetworking.h"
 
 @interface ImageDetailController : UIViewController <ClutchViewDelegate>
 
