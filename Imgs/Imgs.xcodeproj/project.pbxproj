@@ -44,11 +44,11 @@
 		C230313F14CF9360000493C5 /* new-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C230313C14CF9360000493C5 /* new-icon@2x.png */; };
 		C230314014CF9360000493C5 /* hot-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C230313D14CF9360000493C5 /* hot-icon@2x.png */; };
 		C230314314CF9531000493C5 /* LoginOptionController.m in Sources */ = {isa = PBXBuildFile; fileRef = C230314214CF9531000493C5 /* LoginOptionController.m */; };
-		C24297D01501B722007379CF /* Clutch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C24297CF1501B722007379CF /* Clutch.framework */; };
 		C242CD8A14D2244700B5AE52 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C242CD8814D2243A00B5AE52 /* CoreLocation.framework */; };
 		C242CD8D14D2245B00B5AE52 /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C242CD8B14D2245300B5AE52 /* Twitter.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		C24E0DF614D33D3E00426921 /* AboutController.m in Sources */ = {isa = PBXBuildFile; fileRef = C24E0DF514D33D3E00426921 /* AboutController.m */; };
 		C24E0DFF14D36BCE00426921 /* Appirater.m in Sources */ = {isa = PBXBuildFile; fileRef = C24E0DFD14D36BCE00426921 /* Appirater.m */; };
+		C257E44015228F7000EF99EC /* Clutch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C257E43F15228F7000EF99EC /* Clutch.framework */; };
 		C27B63B014C6668E002684FD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C27B63AF14C6668E002684FD /* UIKit.framework */; };
 		C27B63B214C6668E002684FD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C27B63B114C6668E002684FD /* Foundation.framework */; };
 		C27B63B414C6668E002684FD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C27B63B314C6668E002684FD /* CoreGraphics.framework */; };
@@ -215,13 +215,13 @@
 		C230313D14CF9360000493C5 /* hot-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hot-icon@2x.png"; sourceTree = "<group>"; };
 		C230314114CF9531000493C5 /* LoginOptionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginOptionController.h; sourceTree = "<group>"; };
 		C230314214CF9531000493C5 /* LoginOptionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginOptionController.m; sourceTree = "<group>"; };
-		C24297CF1501B722007379CF /* Clutch.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Clutch.framework; sourceTree = "<group>"; };
 		C242CD8814D2243A00B5AE52 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		C242CD8B14D2245300B5AE52 /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
 		C24E0DF414D33D3E00426921 /* AboutController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutController.h; sourceTree = "<group>"; };
 		C24E0DF514D33D3E00426921 /* AboutController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutController.m; sourceTree = "<group>"; };
 		C24E0DFD14D36BCE00426921 /* Appirater.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Appirater.m; sourceTree = "<group>"; };
 		C24E0DFE14D36BCE00426921 /* Appirater.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Appirater.h; sourceTree = "<group>"; };
+		C257E43F15228F7000EF99EC /* Clutch.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Clutch.framework; sourceTree = "<group>"; };
 		C27B63AB14C6668E002684FD /* Imgs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Imgs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C27B63AF14C6668E002684FD /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C27B63B114C6668E002684FD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -445,7 +445,7 @@
 				C213AF9B14C8F28200049926 /* AudioToolbox.framework in Frameworks */,
 				C21DE2CF14D0DC2B004A0CA9 /* MessageUI.framework in Frameworks */,
 				C213AF8914C8F20100049926 /* Parse.framework in Frameworks */,
-				C24297D01501B722007379CF /* Clutch.framework in Frameworks */,
+				C257E44015228F7000EF99EC /* Clutch.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -636,7 +636,7 @@
 			children = (
 				C27B63E114C667DC002684FD /* libsqlite3.dylib */,
 				C213AF9214C8F25500049926 /* libz.dylib */,
-				C24297CF1501B722007379CF /* Clutch.framework */,
+				C257E43F15228F7000EF99EC /* Clutch.framework */,
 				C213AF8814C8F20100049926 /* Parse.framework */,
 				C213AF9414C8F26200049926 /* Security.framework */,
 				C213AF9014C8F24900049926 /* MobileCoreServices.framework */,

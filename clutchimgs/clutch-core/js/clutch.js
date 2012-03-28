@@ -2,10 +2,11 @@
 
 var Clutch = {};
 
-Clutch.VERSION = '0.2';
+Clutch.VERSION = '0.4';
 
 Clutch.iOS = navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPod/i);
 
+var _initialized = false;
 var _callbackNum = 1;
 var _callbacks = {};
 var _methodRegistry = {};
@@ -53,12 +54,22 @@ Clutch.Core = {
 
     bottomReached: function() {
         Backbone.Events.trigger('clutch.bottomReached');
+    },
+    
+    init: function(func) {
+        if(_initialized) {
+            func();
+        }
+        Backbone.Events.bind('clutch.initialized', func);
     }
 };
 
 Clutch.Load = {
-    begin: function(text) {
-        Clutch.Core.callMethod('clutch.loading.begin', {text: text || null});
+    begin: function(text, top) {
+        Clutch.Core.callMethod('clutch.loading.begin', {
+            text: text || null,
+            top: top || null
+        });
     },
     end: function() {
         Clutch.Core.callMethod('clutch.loading.end');
@@ -210,7 +221,7 @@ function setupTapEvents() {
             $(touch.target).trigger('tap');
         }
         touch = {};
-    }).bind('touchcancel', function(){
+    }).bind('touchcancel', function() {
         touch = {};
     });
 }
@@ -224,6 +235,7 @@ function setupTableDeselecter() {
 $(document).ready(function() {
     setupTapEvents();
     setupTableDeselecter();
+    _initialized = true;
     Backbone.Events.trigger('clutch.initialized');
 });
 

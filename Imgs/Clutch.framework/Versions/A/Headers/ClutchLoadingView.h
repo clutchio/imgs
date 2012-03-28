@@ -15,6 +15,7 @@
 }
 
 - (void)show:(NSString *)text;
+- (void)show:(NSString *)text top:(float)top;
 - (void)hide;
 
 @end

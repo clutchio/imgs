@@ -160,8 +160,8 @@ extern "C" {
     
 @interface ClutchJSONEncoder: NSObject
 
-+ (NSString *)jsonString:(NSDictionary *)data;
-+ (NSData *)jsonData:(NSDictionary *)data;
++ (NSString *)jsonString:(id)data;
++ (NSData *)jsonData:(id)data;
 
 @end
     
