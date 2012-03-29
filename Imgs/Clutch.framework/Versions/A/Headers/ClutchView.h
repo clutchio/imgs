@@ -45,6 +45,8 @@
 + (void)logDeviceIdentifier;
 + (NSString *)getDeviceIdentifier;
 + (void)prepareForAnimation:(UIViewController *)viewController success:(void(^)(void))block_;
++ (void)prepareForDisplay:(UIViewController *)viewController success:(void(^)(void))block_;
++ (void)prepareForDisplay:(UIViewController *)viewController;
 
 @end
 

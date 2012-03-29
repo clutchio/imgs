@@ -48,7 +48,6 @@
 		C242CD8D14D2245B00B5AE52 /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C242CD8B14D2245300B5AE52 /* Twitter.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		C24E0DF614D33D3E00426921 /* AboutController.m in Sources */ = {isa = PBXBuildFile; fileRef = C24E0DF514D33D3E00426921 /* AboutController.m */; };
 		C24E0DFF14D36BCE00426921 /* Appirater.m in Sources */ = {isa = PBXBuildFile; fileRef = C24E0DFD14D36BCE00426921 /* Appirater.m */; };
-		C257E44015228F7000EF99EC /* Clutch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C257E43F15228F7000EF99EC /* Clutch.framework */; };
 		C27B63B014C6668E002684FD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C27B63AF14C6668E002684FD /* UIKit.framework */; };
 		C27B63B214C6668E002684FD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C27B63B114C6668E002684FD /* Foundation.framework */; };
 		C27B63B414C6668E002684FD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C27B63B314C6668E002684FD /* CoreGraphics.framework */; };
@@ -74,6 +73,7 @@
 		C29E2ABF14D77C7000715F8A /* top-bar.png in Resources */ = {isa = PBXBuildFile; fileRef = C29E2ABB14D77C7000715F8A /* top-bar.png */; };
 		C29E2AC114D790EA00715F8A /* imgs_57.png in Resources */ = {isa = PBXBuildFile; fileRef = C29E2AC014D790EA00715F8A /* imgs_57.png */; };
 		C29E2AC314D790ED00715F8A /* imgs_114.png in Resources */ = {isa = PBXBuildFile; fileRef = C29E2AC214D790ED00715F8A /* imgs_114.png */; };
+		C2B989F8152507E500F5E1A4 /* Clutch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2B989F7152507E400F5E1A4 /* Clutch.framework */; };
 		C2BAAD2B14D2283200A7221E /* DefaultSHKConfigurator.m in Sources */ = {isa = PBXBuildFile; fileRef = C2BAAC4A14D2283200A7221E /* DefaultSHKConfigurator.m */; };
 		C2BAAD2C14D2283200A7221E /* LegacySHKConfigurator.m in Sources */ = {isa = PBXBuildFile; fileRef = C2BAAC4C14D2283200A7221E /* LegacySHKConfigurator.m */; };
 		C2BAAD2D14D2283200A7221E /* SHKConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = C2BAAC4E14D2283200A7221E /* SHKConfiguration.m */; };
@@ -221,7 +221,6 @@
 		C24E0DF514D33D3E00426921 /* AboutController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutController.m; sourceTree = "<group>"; };
 		C24E0DFD14D36BCE00426921 /* Appirater.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Appirater.m; sourceTree = "<group>"; };
 		C24E0DFE14D36BCE00426921 /* Appirater.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Appirater.h; sourceTree = "<group>"; };
-		C257E43F15228F7000EF99EC /* Clutch.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Clutch.framework; sourceTree = "<group>"; };
 		C27B63AB14C6668E002684FD /* Imgs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Imgs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C27B63AF14C6668E002684FD /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C27B63B114C6668E002684FD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -264,6 +263,7 @@
 		C29E2AC014D790EA00715F8A /* imgs_57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = imgs_57.png; path = ../imgs_57.png; sourceTree = "<group>"; };
 		C29E2AC214D790ED00715F8A /* imgs_114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = imgs_114.png; path = ../imgs_114.png; sourceTree = "<group>"; };
 		C2A0A6A814EE5F8C00A9262C /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
+		C2B989F7152507E400F5E1A4 /* Clutch.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Clutch.framework; sourceTree = "<group>"; };
 		C2BAAC4914D2283200A7221E /* DefaultSHKConfigurator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DefaultSHKConfigurator.h; sourceTree = "<group>"; };
 		C2BAAC4A14D2283200A7221E /* DefaultSHKConfigurator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DefaultSHKConfigurator.m; sourceTree = "<group>"; };
 		C2BAAC4B14D2283200A7221E /* LegacySHKConfigurator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LegacySHKConfigurator.h; sourceTree = "<group>"; };
@@ -445,7 +445,7 @@
 				C213AF9B14C8F28200049926 /* AudioToolbox.framework in Frameworks */,
 				C21DE2CF14D0DC2B004A0CA9 /* MessageUI.framework in Frameworks */,
 				C213AF8914C8F20100049926 /* Parse.framework in Frameworks */,
-				C257E44015228F7000EF99EC /* Clutch.framework in Frameworks */,
+				C2B989F8152507E500F5E1A4 /* Clutch.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -636,7 +636,7 @@
 			children = (
 				C27B63E114C667DC002684FD /* libsqlite3.dylib */,
 				C213AF9214C8F25500049926 /* libz.dylib */,
-				C257E43F15228F7000EF99EC /* Clutch.framework */,
+				C2B989F7152507E400F5E1A4 /* Clutch.framework */,
 				C213AF8814C8F20100049926 /* Parse.framework */,
 				C213AF9414C8F26200049926 /* Security.framework */,
 				C213AF9014C8F24900049926 /* MobileCoreServices.framework */,

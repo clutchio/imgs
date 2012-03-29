@@ -59,6 +59,11 @@ static NSString *kClutchAppId = @"b7ec3bbb-3044-4861-a6f4-7523802f6e52";
     [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"top-bar.png"]
                                        forBarMetrics:UIBarMetricsDefault];
     
+    [ClutchView prepareForDisplay:hot];
+    [ClutchView prepareForDisplay:new];
+    [ClutchView prepareForDisplay:top];
+    [ClutchView prepareForDisplay:more];
+    
     // Initialize Parse
     [Parse setApplicationId:@"8SD1gzkPlWeGIduzcwqDBIAhLUzzrbtNGdWPqbYi" 
                   clientKey:@"zwpVzWtaHpHKNaoU0Wd42UIPTsmsb3EZqcwhKUiG"];
