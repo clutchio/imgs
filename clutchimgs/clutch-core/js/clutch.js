@@ -4,12 +4,46 @@ var Clutch = {};
 
 Clutch.VERSION = '0.4';
 
-Clutch.iOS = navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPod/i);
+Clutch.iOS = $.os.ios;
 
 var _initialized = false;
 var _callbackNum = 1;
 var _callbacks = {};
 var _methodRegistry = {};
+
+var callMethod = null;
+if($.os.android) {
+    callMethod = function(method, args, callback) {
+        if(args && _.isFunction(args)) {
+            callback = args;
+            args = {};
+        }
+        var callbackNum = 0;
+        if(callback && _.isFunction(callback)) {
+            callbackNum = _callbackNum++ % 1000000;
+            _callbacks[callbackNum] = callback;
+        }
+        prompt(JSON.stringify({method: method, callbackNum: '' + callbackNum, args: args || {}}), 'methodCalled');
+    };
+} else {
+    callMethod = function(method, args, callback) {
+        if(args && _.isFunction(args)) {
+            callback = args;
+            args = {};
+        }
+        var callbackNum = 0;
+        if(callback && _.isFunction(callback)) {
+            callbackNum = _callbackNum++ % 1000000;
+            _callbacks[callbackNum] = callback;
+        }
+        var iframe = document.createElement('iframe');
+        iframe.setAttribute('src', '/___mobilerpc___/' + method + '/' + callbackNum + '/' + encodeURIComponent(JSON.stringify(args || {})));
+        document.documentElement.appendChild(iframe);
+        iframe.parentNode.removeChild(iframe);
+        iframe = null;
+    };
+}
+
 Clutch.Core = {
     registerMethod: function(method, func) {
         if(!_methodRegistry[method]) {
@@ -28,22 +62,7 @@ Clutch.Core = {
         callback = null;
     },
 
-    callMethod: function(method, args, callback) {
-        if(args && _.isFunction(args)) {
-            callback = args;
-            args = {};
-        }
-        var callbackNum = 0;
-        if(callback && _.isFunction(callback)) {
-            callbackNum = _callbackNum++ % 1000000;
-            _callbacks[callbackNum] = callback;
-        }
-        var iframe = document.createElement('iframe');
-        iframe.setAttribute('src', '/___mobilerpc___/' + method + '/' + callbackNum + '/' + encodeURIComponent(JSON.stringify(args || {})));
-        document.documentElement.appendChild(iframe);
-        iframe.parentNode.removeChild(iframe);
-        iframe = null;
-    },
+    callMethod: callMethod,
 
     methodCalled: function(method, args) {
         var methods = _methodRegistry[method] || [];
@@ -232,9 +251,16 @@ function setupTableDeselecter() {
     });
 }
 
+function setupViewport() {
+    if(Clutch.iOS) {
+        $('head').append('<meta content="width=device-width, user-scalable=no, initial-scale=.5" name="viewport">');
+    }
+}
+
 $(document).ready(function() {
     setupTapEvents();
     setupTableDeselecter();
+    setupViewport();
     _initialized = true;
     Backbone.Events.trigger('clutch.initialized');
 });
