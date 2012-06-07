@@ -1,7 +1,5 @@
 Backbone.Events.bind('clutch.initialized', function() {
 
-alert('hi');
-
 // This is the global-ish variable where the user will be stored
 var USER = null;
 
@@ -227,8 +225,7 @@ Clutch.Core.registerMethod('setUser', function(data) {
     USER = data;
 });
 
-//if(Clutch.iOS) {
-if(true) {
+if(Clutch.iOS) {
     Clutch.Load.begin();
     Clutch.Core.callMethod('getInitialData', function(data) {
         IMAGES.options.kind = data.kind;
