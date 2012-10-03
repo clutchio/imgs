@@ -1,9 +1,17 @@
 //
-//  ClutchSync.h
-//  Clutch
+// Copyright 2012 Twitter
 //
-//  Created by Eric Florenzano on 10/18/11.
-//  Copyright (c) 2011 Boilerplate Inc. All rights reserved.
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//    http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
 //
 
 #import <Foundation/Foundation.h>
@@ -13,21 +21,22 @@
 
 @interface ClutchSync : NSObject {
     NSString *_appKey;
-    NSString *_cursor;
+    NSString *_tunnelURL;
+    NSString *_rpcURL;
     BOOL _shouldWatchForChanges;
     BOOL _pendingReload;
+    NSString *_cursor;
 }
 
-@property (nonatomic, retain) NSString *appKey;
-@property (nonatomic, retain) NSString *cursor;
-@property (nonatomic, assign) BOOL shouldWatchForChanges;
-@property (assign) BOOL pendingReload;
-
-+ (ClutchSync *)sharedClient:(NSString *)appKey;
-- (void)watchForChanges;
++ (ClutchSync *)sharedClientForKey:(NSString *)appKey
+                         tunnelURL:(NSString *)tunnelURL
+                            rpcURL:(NSString *)rpcURL;
 - (void)sync;
 - (void)background;
 - (void)foreground;
-- (NSString *)getCacheDir;
+
+- (void)setAppKey:(NSString *)appKey;
+- (void)setTunnelURL:(NSString *)tunnelURL;
+- (void)setRpcURL:(NSString *)rpcURL;
 
 @end

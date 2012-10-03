@@ -13,7 +13,9 @@
 #import "Appirater.h"
 #import <Parse/Parse.h>
 
-static NSString *kClutchAppId = @"b7ec3bbb-3044-4861-a6f4-7523802f6e52";
+static NSString *kClutchAppId = @"7e065a47-90f1-4e17-84a5-8197583dda83";
+static NSString *kClutchTunnelURL = @"http://127.0.0.1:41675/";
+static NSString *kClutchRpcURL = @"http://127.0.0.1:41674/";
 
 @implementation AppDelegate
 
@@ -49,7 +51,7 @@ static NSString *kClutchAppId = @"b7ec3bbb-3044-4861-a6f4-7523802f6e52";
     self.window.rootViewController = self.tabBarController;
 
     // Synchronize with the Clutch servers
-    [[ClutchSync sharedClient:kClutchAppId] sync];
+    [[ClutchSync sharedClientForKey:kClutchAppId tunnelURL:kClutchTunnelURL rpcURL:kClutchRpcURL] sync];
     
     // Log the device identifier
     [ClutchView logDeviceIdentifier];
@@ -91,7 +93,7 @@ static NSString *kClutchAppId = @"b7ec3bbb-3044-4861-a6f4-7523802f6e52";
      Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
      If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
      */
-    [[ClutchSync sharedClient:kClutchAppId] background];
+    [[ClutchSync sharedClientForKey:kClutchAppId tunnelURL:kClutchTunnelURL rpcURL:kClutchRpcURL] background];
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application
@@ -99,7 +101,7 @@ static NSString *kClutchAppId = @"b7ec3bbb-3044-4861-a6f4-7523802f6e52";
     /*
      Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
      */
-    [[ClutchSync sharedClient:kClutchAppId] foreground];
+    [[ClutchSync sharedClientForKey:kClutchAppId tunnelURL:kClutchTunnelURL rpcURL:kClutchRpcURL] foreground];
     [Appirater appEnteredForeground:YES];
 }
 

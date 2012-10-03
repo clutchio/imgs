@@ -262,7 +262,7 @@
             /* Now we have the images in 'resp', we need to do a query for all the likes on them. */
             
             // First we need to make a deep mutable copy of the image gallery list
-            NSArray *origGallery = [resp objectForKey:@"gallery"];
+            NSArray *origGallery = [resp objectForKey:@"data"];
             NSMutableArray *gallery = [NSMutableArray arrayWithCapacity:[origGallery count]];
             for(int i = 0; i < [origGallery count]; ++i) {
                 NSDictionary *image = [[origGallery objectAtIndex:i] mutableCopy];
