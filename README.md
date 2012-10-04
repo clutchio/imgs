@@ -10,5 +10,5 @@ when using Clutch.
 
 We designed, coded, and shipped this app in a week.
 
-![Screenshot 1](https://github.com/boilerplate/Imgs/raw/master/screen1.png)
-![Screenshot 2](https://github.com/boilerplate/Imgs/raw/master/screen2.png)
+![Screenshot 1](https://raw.github.com/clutchio/imgs/master/screen1.png)
+![Screenshot 2](https://raw.github.com/clutchio/imgs/master/screen2.png)
