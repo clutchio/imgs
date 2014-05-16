@@ -16,7 +16,7 @@
 
 #import <Foundation/Foundation.h>
 #import <Clutch/ClutchUtils.h>
-#import "/usr/include/sqlite3.h"
+#include <sqlite3.h>
 
 @interface ClutchStats : NSObject {
     sqlite3 *db;
